@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工具集 - Tools Collection</title>
+    <meta name="description" content="一个收集实用开发工具的仓库，帮助开发者提高效率">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* 英雄区域 */
+        
+        .hero {
+            text-align: center;
+            padding: 100px 0 80px;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            animation: fadeInUp 1.2s ease-out;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            animation: fadeInUp 1.4s ease-out;
+        }
+        /* 工具网格 */
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 60px 0;
+        }
+        
+        .tool-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tool-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.5s;
+        }
+        
+        .tool-card:hover::before {
+            left: 100%;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .tool-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .tool-title {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .tool-description {
+            color: #7f8c8d;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .tool-features {
+            list-style: none;
+        }
+        
+        .tool-features li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .tool-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+        
+        .tool-link {
+            display: inline-block;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .tool-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        /* 页脚 */
+        
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            color: white;
+            opacity: 0.8;
+        }
+        
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        /* 动画 */
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* 响应式 */
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1.1rem;
+            }
+            .tools-grid {
+                grid-template-columns: 1fr;
+                padding: 40px 0;
+            }
+            .tool-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 英雄区域 -->
+        <section class="hero">
+            <h1>🛠️ 工具集</h1>
+            <p>一个收集实用开发工具的仓库，帮助开发者提高效率</p>
+            <p class="subtitle">无论是前端开发、数据处理还是其他领域，我们都致力于提供高质量、易用的工具</p>
+        </section>
+
+        <!-- 工具网格 -->
+        <section class="tools-grid">
+            <!-- JsonViewer 工具卡片 -->
+            <a href="./jsonviewer.html" class="tool-card">
+                <div class="tool-icon">🔍</div>
+                <h3 class="tool-title">JsonViewer</h3>
+                <p class="tool-description">
+                    专为JSON数据分析师设计的强大查看器，支持多种格式解析和智能渲染。无论是压缩JSON、Python dict还是嵌套长文本，都能轻松处理。
+                </p>
+                <ul class="tool-features">
+                    <li>智能解析Python dict格式</li>
+                    <li>Monaco Editor语法高亮</li>
+                    <li>Markdown和嵌套JSON渲染</li>
+                    <li>多标签页和拖拽排序</li>
+                    <li>格式化/压缩视图切换</li>
+                </ul>
+                <span class="tool-link">立即使用 →</span>
+            </a>
+
+            <!-- 占位符：未来工具 -->
+            <div class="tool-card" style="pointer-events: none; opacity: 0.6;">
+                <div class="tool-icon">🚀</div>
+                <h3 class="tool-title">敬请期待</h3>
+                <p class="tool-description">
+                    更多实用工具正在开发中... 如果您有好的工具想法，欢迎贡献！
+                </p>
+                <ul class="tool-features">
+                    <li>持续更新中</li>
+                    <li>开源协作</li>
+                    <li>社区驱动</li>
+                </ul>
+                <span class="tool-link" style="background: #95a5a6;">Coming Soon</span>
+            </div>
+        </section>
+
+        <!-- 页脚 -->
+        <footer class="footer">
+            <p>
+                Made with ❤️ by <a href="https://github.com/xkKevin" target="_blank">xkKevin</a> |
+                <a href="https://github.com/xkKevin/tools" target="_blank">GitHub</a> |
+                <a href="https://github.com/xkKevin/tools/blob/main/README.md" target="_blank">文档</a>
+            </p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">
+                © 2026 Tools Collection. Licensed under MIT.
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // 添加一些交互效果
+        document.addEventListener('DOMContentLoaded', function() {
+            // 工具卡片点击动画
+            const cards = document.querySelectorAll('.tool-card');
+            cards.forEach(card => {
+                card.addEventListener('click', function(e) {
+                    if (this.style.pointerEvents === 'none') return;
+
+                    // 添加点击波纹效果
+                    const ripple = document.createElement('div');
+                    ripple.style.position = 'absolute';
+                    ripple.style.borderRadius = '50%';
+                    ripple.style.background = 'rgba(255,255,255,0.6)';
+                    ripple.style.transform = 'scale(0)';
+                    ripple.style.animation = 'ripple 0.6s linear';
+                    ripple.style.left = (e.offsetX - 10) + 'px';
+                    ripple.style.top = (e.offsetY - 10) + 'px';
+                    ripple.style.width = '20px';
+                    ripple.style.height = '20px';
+
+                    this.appendChild(ripple);
+
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+        });
+
+        // 波纹动画
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+
+</html>

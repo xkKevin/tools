@@ -30,7 +30,7 @@
         
         .hero {
             text-align: center;
-            padding: 100px 0 80px;
+            padding: 50px 0 0px;
             color: white;
         }
         
@@ -59,7 +59,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
-            padding: 60px 0;
+            padding: 50px 0;
         }
         
         .tool-card {
@@ -97,13 +97,13 @@
         }
         
         .tool-icon {
-            font-size: 3rem;
+            font-size: 2.8rem;
             margin-bottom: 20px;
             display: block;
         }
         
         .tool-title {
-            font-size: 1.8rem;
+            font-size: 2.5rem;
             margin-bottom: 15px;
             color: #2c3e50;
         }
@@ -211,8 +211,11 @@
         <section class="tools-grid">
             <!-- JsonViewer 工具卡片 -->
             <a href="./jsonviewer.html" class="tool-card">
-                <div class="tool-icon">🔍</div>
-                <h3 class="tool-title">JsonViewer</h3>
+                <div class="tool-icon">
+                    🔍
+                    <span class="tool-title">JsonViewer</span>
+                </div>
+
                 <p class="tool-description">
                     专为JSON数据分析师设计的强大查看器，支持多种格式解析和智能渲染。无论是压缩JSON、Python dict还是嵌套长文本，都能轻松处理。
                 </p>
@@ -228,8 +231,10 @@
 
             <!-- 占位符：未来工具 -->
             <div class="tool-card" style="pointer-events: none; opacity: 0.6;">
-                <div class="tool-icon">🚀</div>
-                <h3 class="tool-title">敬请期待</h3>
+                <div class="tool-icon">
+                    🚀
+                    <span class="tool-title">敬请期待</span>
+                </div>
                 <p class="tool-description">
                     更多实用工具正在开发中... 如果您有好的工具想法，欢迎贡献！
                 </p>

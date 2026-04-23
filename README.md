@@ -4,7 +4,6 @@
 
 🌟 **一个收集实用开发工具的仓库，帮助开发者提高效率！**
 
-
 </div>
 
 ---
@@ -17,9 +16,9 @@
 
 ### 🔧 可用工具
 
-| 工具名称               | 描述                                                       | 状态    |
-| ---------------------- | ---------------------------------------------------------- | ------- |
-| [JsonViewer](#jsonviewer) | 专为JSON数据分析师设计的强大查看器，支持多种格式解析和渲染 | ✅ 可用 |
+| 工具名称                                                         | 描述                                                       | 状态    |
+| ---------------------------------------------------------------- | ---------------------------------------------------------- | ------- |
+| [JsonViewer](https://xkkevin.github.io/tools/jsonviewer/index.html) | 专为JSON数据分析师设计的强大查看器，支持多种格式解析和渲染 | ✅ 可用 |
 
 ---
 
@@ -60,6 +59,10 @@ JsonViewer 专为这些场景打造，提供直观的编辑、渲染和辅助视
   - **纯文本**：保留原始换行和格式
 - **交互友好**：悬浮窗右上角可关闭，内容可滚动查看
 
+#### 面包屑路径
+- 支持面包屑（Breadcrumb）路径导航
+- 支持字符串、字典键值对、数组长度统计
+
 #### ⚙️ 实用工具
 
 - **自动换行开关**：控制是否在行内换行显示长value
@@ -95,10 +98,11 @@ JsonViewer 专为这些场景打造，提供直观的编辑、渲染和辅助视
 
 ### 📸 功能演示
 
-![jsonviewer_system](img/jsonviewer_system.png)
-
-![jsonviewer_support_markdown_render](img/jsonviewer_support_markdown_render.png)
-
+![jsonviewer_system1](img/1.png)
+![jsonviewer_system2](img/2.png)
+![jsonviewer_system3](img/3.png)
+![jsonviewer_system4](img/4.png)
+![jsonviewer_system4](img/5.png)
 
 ### 🔧 技术栈
 
